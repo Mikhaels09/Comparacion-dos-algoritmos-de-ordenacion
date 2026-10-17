@@ -1,1 +1,2 @@
 16/10: elegí Inserción vs Quicksort, escribí el README y registré mi entorno de pruebas.
+17/10: cambié la dupla a Inserción vs Shell sort porque es más fácil de entender y compara bien una mejora directa; actualicé el README.

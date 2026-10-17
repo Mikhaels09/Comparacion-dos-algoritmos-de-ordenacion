@@ -10,7 +10,7 @@ Elegí Inserción y Quicksort. Inserción es un método directo y Quicksort es l
 - Tiempo de ejecución (ms)
 - Número de comparaciones
 - Número de intercambios
-- Profundidad de recursión (solo aplica a Quicksort)
+- Profundidad de recursión (no aplica, porque ninguno de los dos es recursivo)
 
 ## Estructura del repositorio
 - `src/`: código fuente en C++
@@ -29,4 +29,4 @@ Elegí Inserción y Quicksort. Inserción es un método directo y Quicksort es l
 En construcción.
 
 ## Estado
-Hasta ahora creé el repositorio con su estructura y elegí los algoritmos.
+Hasta ahora creé el repositorio con su estructura y elegí los algoritmos (Inserción y Shell sort). Me falta programar el código, hacer las pruebas, los gráficos y el artículo.
