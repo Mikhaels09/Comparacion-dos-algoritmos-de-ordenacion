@@ -1,0 +1,1 @@
+16/10: elegí Inserción vs Quicksort, escribí el README y registré mi entorno de pruebas.
