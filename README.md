@@ -4,7 +4,7 @@
 Este proyecto compara dos algoritmos de ordenación implementados en C++, midiendo su tiempo de ejecución, el número de comparaciones y el número de intercambios. Lo desarrollo de manera individual para el curso de Programación Avanzada.
 
 ## Algoritmos comparados
-Elegí Inserción y Quicksort. Inserción es un método directo y Quicksort es logarítmico. Los escogí porque son los que mejor entiendo y porque encontré bastante información sobre ellos.
+Elegí Inserción y Shell sort. Inserción es un método directo y Shell sort es una mejora de Inserción que compara elementos separados por saltos. Los escogí porque Shell parte de la misma idea que Inserción, y eso permite ver claramente cuánto mejora el rendimiento.
 
 ## Qué se mide
 - Tiempo de ejecución (ms)
