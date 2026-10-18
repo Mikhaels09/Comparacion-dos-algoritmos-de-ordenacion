@@ -1,5 +1,6 @@
 #include<iostream>
 using namespace std;
+
 void Insercion(int A[], int n, long long &comparaciones, long long &intercambios){
 	for(int i=1;i<n;i++){
 		int aux=A[i];
@@ -11,24 +12,54 @@ void Insercion(int A[], int n, long long &comparaciones, long long &intercambios
 				intercambios++;    
 				k=k-1;
 			} else {
-				break;             
+				break;              
 			}
 		}
 		A[k+1]=aux;
+	}
+}
+void ShellSort(int A[], int n, long long &comparaciones, long long &intercambios){
+	int k=n;
+	while(k>1){
+		k=k/2;                      
+		for(int i=k;i<n;i++){
+			int aux=A[i];
+			int j=i;
+			while(j-k>=0){
+				comparaciones++;    
+				if(A[j-k]>aux){
+					A[j]=A[j-k];    
+					intercambios++;
+					j=j-k;
+				} else {
+					break;
+				}
 			}
+			A[j]=aux;
+		}
+	}
 }
 
 int main(){
-	int A[10]={8 2 3 9 1 3 8 5 3 8};
+	int original[10]={2,3,7,5,7,9,5,3,2,1};
 	int n=10;
-	long long comparaciones=0, intercambios=0;
-
-	Insercion(A,n,comparaciones,intercambios);
-
+	int a[10], b[10];
+	
 	for(int i=0;i<n;i++){
-		cout<<A[i]<<" ";
+		a[i]=original[i];
+		b[i]=original[i];
 	}
-	cout<<endl<<"Comparaciones: "<<comparaciones<<endl;
-	cout<<"Intercambios: "<<intercambios<<endl;
+
+	long long c1=0, i1=0, c2=0, i2=0;
+	Insercion(a,n,c1,i1);
+	ShellSort(b,n,c2,i2);
+
+	cout<<"Inserción:  ";
+	for(int i=0;i<n;i++) cout<<a[i]<<" ";
+	cout<<endl<<"Comparaciones: "<<c1<<"  Intercambios: "<<i1<<endl<<endl;
+
+	cout<<"Shell sort: ";
+	for(int i=0;i<n;i++) cout<<b[i]<<" ";
+	cout<<endl<<"Comparaciones: "<<c2<<"  Intercambios: "<<i2<<endl;
 	return 0;
 }
