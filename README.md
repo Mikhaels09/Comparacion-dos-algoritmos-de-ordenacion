@@ -23,7 +23,7 @@ Elegí Inserción y Shell sort. Inserción es un método directo y Shell sort es
 - CPU: Intel Core i5-12450H (12.ª generación), 8 núcleos, 12 hilos, frecuencia base 2.00 GHz
 - RAM: 15.7 GB
 - Sistema operativo: Windows 11 Pro, versión 26H2 (compilación 26300.9711)
-- Compilador: g++ (MinGW.org GCC-6.3.0-1) 6.3.0
+- Compilador: g++ 16.2.0 (MSYS2 UCRT64)
 
 ## Cómo ejecutar
 En construcción.
