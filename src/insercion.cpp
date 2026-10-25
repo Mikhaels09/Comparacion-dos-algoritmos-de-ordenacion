@@ -1,4 +1,6 @@
 #include<iostream>
+#include<cstdlib>   
+#include<chrono>    
 using namespace std;
 
 void Insercion(int A[], int n, long long &comparaciones, long long &intercambios){
@@ -6,29 +8,30 @@ void Insercion(int A[], int n, long long &comparaciones, long long &intercambios
 		int aux=A[i];
 		int k=i-1;
 		while(k>=0){
-			comparaciones++;        
+			comparaciones++;
 			if(aux<A[k]){
 				A[k+1]=A[k];
-				intercambios++;    
+				intercambios++;
 				k=k-1;
 			} else {
-				break;              
+				break;
 			}
 		}
 		A[k+1]=aux;
 	}
 }
+
 void ShellSort(int A[], int n, long long &comparaciones, long long &intercambios){
 	int k=n;
 	while(k>1){
-		k=k/2;                      
+		k=k/2;
 		for(int i=k;i<n;i++){
 			int aux=A[i];
 			int j=i;
 			while(j-k>=0){
-				comparaciones++;    
+				comparaciones++;
 				if(A[j-k]>aux){
-					A[j]=A[j-k];    
+					A[j]=A[j-k];
 					intercambios++;
 					j=j-k;
 				} else {
@@ -40,26 +43,46 @@ void ShellSort(int A[], int n, long long &comparaciones, long long &intercambios
 	}
 }
 
+
+bool estaOrdenado(int A[], int n){
+	for(int i=1;i<n;i++){
+		if(A[i-1]>A[i]) return false;
+	}
+	return true;
+}
+
 int main(){
-	int original[10]={2,3,7,5,7,9,5,3,2,1};
-	int n=10;
-	int a[10], b[10];
-	
+	int n=1000;                      
+	int* original=new int[n];      
+	int* copia=new int[n];           
+
+
+	srand(12345);
 	for(int i=0;i<n;i++){
-		a[i]=original[i];
-		b[i]=original[i];
+		original[i]=rand()%32768;    
 	}
 
-	long long c1=0, i1=0, c2=0, i2=0;
-	Insercion(a,n,c1,i1);
-	ShellSort(b,n,c2,i2);
+//insercion
+	for(int i=0;i<n;i++) copia[i]=original[i];  
+	long long c1=0, i1=0;
+	auto inicio1=chrono::steady_clock::now();    
+	Insercion(copia,n,c1,i1);
+	auto fin1=chrono::steady_clock::now();      
+	double t1=chrono::duration<double,milli>(fin1-inicio1).count();   
+	cout<<"Insercion -> tiempo: "<<t1<<" ms, comparaciones: "<<c1
+	    <<", intercambios: "<<i1<<", ordenado: "<<estaOrdenado(copia,n)<<endl;
 
-	cout<<"Inserción:  ";
-	for(int i=0;i<n;i++) cout<<a[i]<<" ";
-	cout<<endl<<"Comparaciones: "<<c1<<"  Intercambios: "<<i1<<endl<<endl;
+// shellsort
+	for(int i=0;i<n;i++) copia[i]=original[i];   
+	long long c2=0, i2=0;
+	auto inicio2=chrono::steady_clock::now();
+	ShellSort(copia,n,c2,i2);
+	auto fin2=chrono::steady_clock::now();
+	double t2=chrono::duration<double,milli>(fin2-inicio2).count();
+	cout<<"ShellSort -> tiempo: "<<t2<<" ms, comparaciones: "<<c2
+	    <<", intercambios: "<<i2<<", ordenado: "<<estaOrdenado(copia,n)<<endl;
 
-	cout<<"Shell sort: ";
-	for(int i=0;i<n;i++) cout<<b[i]<<" ";
-	cout<<endl<<"Comparaciones: "<<c2<<"  Intercambios: "<<i2<<endl;
+	delete[] original;
+	delete[] copia;
 	return 0;
 }
