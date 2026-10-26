@@ -7,3 +7,4 @@
 - 18/10: programé Shell sort con contadores y lo probé junto a Inserción.
 - 24/10: instalé un compilador más nuevo (MSYS2) porque el anterior tenía un reloj con resolución de 2 ms y no medía bien.
 - 24/10: agregué el generador de patrones y probé los dos algoritmos con aleatorio, ascendente y descendente.
+- 25/10: programa completo con 30 repeticiones, CSV y script de reproducción.
