@@ -8,3 +8,4 @@
 - 24/10: instalé un compilador más nuevo (MSYS2) porque el anterior tenía un reloj con resolución de 2 ms y no medía bien.
 - 24/10: agregué el generador de patrones y probé los dos algoritmos con aleatorio, ascendente y descendente.
 - 25/10: programa completo con 30 repeticiones, CSV y script de reproducción.
+- 26/10: corrí n = 100 000, ajusté el boxplot a escala logarítmica y actualicé la estadística y las figuras.
