@@ -26,7 +26,8 @@ Elegí Inserción y Shell sort. Inserción es un método directo y Shell sort es
 - Compilador: g++ 16.2.0 (MSYS2 UCRT64)
 
 ## Cómo ejecutar
-bash scripts/reproducir.sh
+bash scripts/reproducir.sh grande
+se ejecuta desde MSYS2 UCRT64 con g++ instalado.
 
 ## Estado
-Hasta ahora creé el repositorio con su estructura y elegí los algoritmos (Inserción y Shell sort). Me falta programar el código, hacer las pruebas, los gráficos y el artículo.
+Proyecto terminado: código en C++ de ambos algoritmos, mediciones con 30 repeticiones, gráficos y artículo científico (en docs/).
