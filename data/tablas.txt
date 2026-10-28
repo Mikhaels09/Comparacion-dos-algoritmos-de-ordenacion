@@ -1,0 +1,27 @@
+Guardado data/estadisticas.csv
+
+TABLA 1. Tiempo de ejecución (ms), promedio ± desviación estándar
+n | patrón | Inserción | Shell sort
+1000 | aleatorio | 0.1793 ± 0.0132 | 0.0491 ± 0.0078
+1000 | ascendente | 0.0008 ± 0.0001 | 0.0069 ± 0.0005
+1000 | descendente | 0.3745 ± 0.0516 | 0.0104 ± 0.0022
+10000 | aleatorio | 25.7567 ± 6.3653 | 0.9726 ± 0.2075
+10000 | ascendente | 0.0179 ± 0.0083 | 0.2266 ± 0.0938
+10000 | descendente | 42.9449 ± 12.0692 | 0.1641 ± 0.0489
+100000 | aleatorio | 2574.1180 ± 178.7124 | 13.6624 ± 2.4832
+100000 | ascendente | 0.0954 ± 0.0025 | 1.4962 ± 0.1164
+100000 | descendente | 5266.0327 ± 207.2387 | 2.3217 ± 0.4626
+
+TABLA 2. Comparaciones e intercambios (promedio)
+n | patrón | Inserción comp. | Inserción interc. | Shell comp. | Shell interc.
+1000 | aleatorio | 250162 | 249169 | 15231 | 7740
+1000 | ascendente | 999 | 0 | 8006 | 0
+1000 | descendente | 499500 | 499500 | 11716 | 4700
+10000 | aleatorio | 24980062 | 24970071 | 264038 | 149108
+10000 | ascendente | 9999 | 0 | 120005 | 0
+10000 | descendente | 49995000 | 49995000 | 172578 | 62560
+100000 | aleatorio | 2498992318 | 2498892328 | 4243409 | 2793868
+100000 | ascendente | 99999 | 0 | 1500006 | 0
+100000 | descendente | 4999950000 | 4999950000 | 2244585 | 844560
+
+Figuras guardadas en docs/figuras/
