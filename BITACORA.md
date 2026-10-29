@@ -9,3 +9,4 @@
 - 24/10: agregué el generador de patrones y probé los dos algoritmos con aleatorio, ascendente y descendente.
 - 25/10: programa completo con 30 repeticiones, CSV y script de reproducción.
 - 26/10: corrí n = 100 000, ajusté el boxplot a escala logarítmica y actualicé la estadística y las figuras.
+- 28/10: Se agregó el artículo en PDF a docs.
